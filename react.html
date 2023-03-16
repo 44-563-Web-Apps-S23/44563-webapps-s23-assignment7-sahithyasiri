@@ -16,7 +16,7 @@
   <button type="button" class="btn btn-success" onclick="startTime()">Start Timer</button>
   <div id="counter"> Count </div>
   <button type="button" class="btn btn-warning" onclick="recordTime()"> React</button>
-  
+  <button type="button" class="btn btn-secondary" onclick="randomStart()">Random Start</button>
   <p id="countdown">will be red </p>
   
 <script> 
@@ -34,6 +34,7 @@ function startTime(){
       console.log(variable);
       setTimeou(i); 
   }
+
   
 setTimeout( () => {
       console.log("Entered anononymouse fn");
@@ -50,11 +51,18 @@ setTimeout( () => {
           console.log(temp);
           document.getElementById('target').innerHTML="Time was "+temp; }},8*1000);
   }
+  function randomStart(){
+          startCount = Math.floor(Math.random()*(10-2+1)+2)
+          startTime()
+      }
+
+
   
   function setTimeou(i)
  {
       setTimeout(()=>{document.getElementById('countdown').innerHTML=i;},(variable-i)*1000);
   }
+
 </script>
 
 
